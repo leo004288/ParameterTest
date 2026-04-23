@@ -24,7 +24,7 @@ public class TestController {
 	public String temp(String a, int b) {
 		
 		System.out.println("a=" + a);
-		System.out.println("b=" + b + 3);     // 문자 + 숫자 + 숫자 / "b=" + (b + 3)
+		System.out.println("b=" + (b + 3));     // 문자 + (숫자 + 숫자) -> 숫자먼저 계산
 		
 		return "none";                        // 파일없음 -> 404
 	}
@@ -40,7 +40,7 @@ public class TestController {
 		int    b = Integer.parseInt(in_b);
 		
 		System.out.println("a=" + a);
-		System.out.println("b=" + b);
+		System.out.println("b=" + (b + 3));
 		
 		return "none";
 	}
@@ -55,7 +55,7 @@ public class TestController {
 		int    b = Integer.parseInt(map.get("b"));
 		
 		System.out.println("a=" + a);
-		System.out.println("b=" + b);
+		System.out.println("b=" + (b + 3));
 		
 		return "none";
 	}
@@ -66,7 +66,7 @@ public class TestController {
 			@RequestParam("a") String x, @RequestParam("b") int y) {
 		
 		System.out.println("a=" + x);
-		System.out.println("b=" + y);     
+		System.out.println("b=" + (y + 3));     
 		
 		return "none";                        
 	}
