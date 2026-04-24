@@ -32,7 +32,7 @@ public class TestController {
 		System.out.println("a=" + a);
 		System.out.println("b=" + (b + 1));     // 문자 + (숫자 + 숫자) -> 숫자먼저 계산
 		
-		return "none";                          // 파일없음 -> 404
+		return "noneModel";                          // 파일없음 -> 404
 	}
 	
 	// /temp1?a=hello&b=123
@@ -48,7 +48,7 @@ public class TestController {
 		System.out.println("a=" + a);
 		System.out.println("b=" + (b + 2));
 		
-		return "none";
+		return "noneModel";
 	}
 	
 	// /temp2?a=hello&b=123
@@ -63,7 +63,7 @@ public class TestController {
 		System.out.println("a=" + a);
 		System.out.println("b=" + (b + 3));
 		
-		return "none";
+		return "noneModel";
 	}
 	
 	// /temp3?a=hello&b=123    // 요즘 spring boot 가 인자를 처리하는 방식
@@ -74,7 +74,7 @@ public class TestController {
 		System.out.println("a=" + x);
 		System.out.println("b=" + (y + 4));     
 		
-		return "none";                        
+		return "noneModel";                        
 	}
 	
 	// /temp4?a=hello&b=123
@@ -87,7 +87,7 @@ public class TestController {
 		System.out.println("a=" + a);
 		System.out.println("b=" + (b + 5));
 		
-		return "none";
+		return "noneModel";
 	}
 
 //--------------------------------------------------------------------------------	
@@ -103,9 +103,9 @@ public class TestController {
 		
 		model.addAttribute("a", a);
 		model.addAttribute("b", b*3);
-		model.addAttribute("c", "cc");
+
 		
-		return "reqdata";
+		return "noneModel";
 	}
 	
 	// /temp6?a=hello&b=123
@@ -120,9 +120,9 @@ public class TestController {
 		
 		model.addAttribute("a", a);
 		model.addAttribute("b", b-7);
-		model.addAttribute("c", "cc");
 		
-		return "reqdata";
+		
+		return "noneModel";
 	}
 	
 	// /temp7?a=hello&b=123
@@ -150,7 +150,7 @@ public class TestController {
 		System.out.println("a=" + a);
 		System.out.println("b=" + (b - 23));
 		
-		return "none";
+		return "noneModel";
 	}
 	
 	// /temp9/hello/123 
@@ -161,7 +161,7 @@ public class TestController {
 		System.out.println("a=" + vo.getA());
 		System.out.println("b=" + vo.getB());
 		
-		return "none";
+		return "noneModel";
 	}
 	
 	// /temp10/hello/123 
