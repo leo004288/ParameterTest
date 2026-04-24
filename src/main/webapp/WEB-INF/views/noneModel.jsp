@@ -8,8 +8,8 @@
 </head>
 <body>
 	<h2>넘어온 data(model)</h2>
-	${ a }    == model.getAttribute("a")
-	${ vo.a } == vo.getA() 
+	${ a }    == model.getAttribute("a")<br>
+	${ vo.a } == vo.getA()<br>
 	<p>a : ${ a }</p>
 	<p>b : ${ b }</p>
 	<br>
@@ -20,7 +20,7 @@
 	<p>b : ${ attrName.b }</p>
 	<br>
 	<p>a : ${ param.a }(request.getParameter("a"))</p>
-	<p>b : ${ param.b }(request.getParameter("a"))
+	<p>b : ${ param.b }(request.getParameter("b"))
 	   requestScope 공유한다
 	</p>
 	
